@@ -1,0 +1,17 @@
+
+h1{
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif; /* Fonte padrão, limpa e legível */
+}
