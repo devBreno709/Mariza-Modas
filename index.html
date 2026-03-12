@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Mariza Modas</title>
+    <style>
+        /* Reset total */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+    
+        main {
+            display: grid;
+            /* Força 6 colunas iguais */
+            grid-template-columns: repeat(6, 1fr) !important; 
+            gap: 10px; 
+            padding: 10px;
+            width: 100%; /* Ocupa a largura total da tela */
+            margin: 0;
+        }
+    
+        .produto-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 280px; /* Reduzi a altura para não sumir o botão */
+        }
+    
+        .produto-card img {
+            width: 100%;
+            height: 100px; /* Imagem menor para caber em 6 colunas */
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+    
+        .produto-card h2 { font-size: 0.8rem; margin-bottom: 5px; }
+        .produto-card p { font-size: 0.7rem; color: #666; }
+        .preco { font-weight: bold; color: #2ecc71; font-size: 0.9rem; margin: 5px 0; }
+    
+        .btn-comprar {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 8px 2px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.7rem; /* Letra pequena para o botão não quebrar */
+        }
+    
+        /* REMOVI AS REGRAS QUE MUDAVAM PARA 2 COLUNAS */
+        /* Agora ele só vai mudar para 1 coluna se a tela for MUITO pequena (celular) */
+        @media (max-width: 480px) {
+            main {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mariza Modas</h1>
+        <p>O estilo inspirado em você.</p>
+    </header>
+
+    <main>
+        <div class="produto-card">
+            <img src="https://via.placeholder.com/150" alt="Camiseta">
+            <h2>Camiseta Básica</h2>
+            <p>Tamanhos: P, M, G</p>
+            <p class="preco">R$ 65,00</p>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="./img/minecraft.png" alt="Calça">
+            <h2>Calça Jeans</h2>
+            <p>Tamanhos: 36 a 48</p>
+            <p class="preco">R$ 120,00</p>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="https://via.placeholder.com/150">
+            <h2>Jaqueta Couro</h2>
+            <p>Tamanhos: P, M, GG</p>
+            <p class="preco">R$ 250,00</p>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="https://via.placeholder.com/150">
+            <h2>Tênis Sport</h2>
+            <p>Tamanhos: 40 e 43</p>
+            <p class="preco">R$ 85,00</p>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="https://via.placeholder.com/150">
+            <h2>Boné Aba Curva</h2>
+            <p>Tamanho: Único</p>
+            <p class="preco">R$ 38,00</p>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="https://via.placeholder.com/150">
+            <h2>Par De Meia</h2>
+            <p>Tamanhos: 39 e 40</p>
+            <p class="preco">R$ 8,00</p>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="https://via.placeholder.com/150">
+            <h2>Cueca Simples</h2>
+            <p>Tamanhos: M, G, GG</p>
+            <p class="preco">R$ 15,00</p>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="https://via.placeholder.com/150">
+            <h2>Cueca Box</h2>
+            <p>Tamanhos: P, M, G, GG</p>
+            <p class="preco">R$ 22,00</p>
+            <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        </div>
+    </main>
+
+    <script>
+        function comprar() {
+            alert("Ligue para nós: (87) 998876-2611");
+        }
+    </script>
+</body>
+</html>
